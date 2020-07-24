@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tello</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <section class="flex flex-col h-screen bg-red-100 overflow-hidden">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flash' if notice %>
+      <div class="overflow-auto bg-blue-300 h-full">
+        <%= yield %>
+      </div>
+    </section>
+  </body>
+</html>
